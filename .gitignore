@@ -10,10 +10,9 @@ __v0_jsx-dev-runtime.ts
 .env*.local
 
 # Common ignores
-node_modules
+node_modules/
 .next/
 .DS_Store
 .env
 .env.local
 ml-service/__pycache__/
-ml-service/model/xgboost_model.pkl
