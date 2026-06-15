@@ -8,8 +8,10 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { User, Mail, Lock, Phone, Store } from 'lucide-react';
+import { useRouter } from "next/navigation";
 
 export default function ProfileSettingsPage() {
+  const router = useRouter();
   const { user, updateUser } = useAuth();
   const { addToast } = useNotifications();
   const [isEditing, setIsEditing] = useState(false);
@@ -217,6 +219,7 @@ export default function ProfileSettingsPage() {
                 <span className="font-medium text-gray-900">{(user as any)?.matric}</span>
               </div>
             )}
+            <button onClick={() => router.back()} className="mt-4 text-blue-600 hover:underline">← Back</button>
           </div>
         </Card>
       </div>

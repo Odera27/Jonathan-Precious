@@ -139,9 +139,12 @@ export default function CartPage() {
                   {/* Product Image */}
                   <div className="w-20 h-20 flex-shrink-0 bg-gray-100 rounded-lg overflow-hidden">
                     <img
-                      src={item.product.imageUrl}
-                      alt={item.product.name}
-                      className="w-full h-full object-cover"
+                       src={item.product.imageUrl}
+                       alt={item.product.name}
+                       className="w-full h-full object-cover"
+                       onError={(e) => {
+                       e.currentTarget.src = "https://placehold.co/200x200?text=No+Image";
+                      }}
                     />
                   </div>
 
